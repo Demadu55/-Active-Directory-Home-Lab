@@ -47,6 +47,31 @@ Built a fully functional Active Directory domain environment from scratch in Vir
 * **Scope Isolation:** Confirmed Command Prompt remains accessible (GPO scoped correctly, no unintended over-restriction).
 * **DHCP Verification:** Released/renewed `Client01`'s IP and confirmed it received a DHCP-leased address (`10.0.2.100`) with correct subnet mask, gateway, and DNS suffix.
 
+### Screenshots
+
+This section presents the visual evidence of the successful deployment and configuration described above.
+
+#### Organizational Unit structure
+![AD Users and Computers OU structure (Departments: IT, Sales, HR; plus Groups and Service Accounts)](./Org_unit_str.png)
+
+#### Security groups
+![IT-Staff, Sales-Staff, and HR-Staff security groups created under the Groups OU](./GP_M_Verificatio.png)
+
+#### Group membership verification
+![User properties confirming group membership (Member Of: IT-Staff, Domain Users)](./GP_M_Verificatio.png)
+
+#### Domain password policy
+![Default Domain Policy Password Policy settings (minimum length, complexity, history, max age)](./Domain_pswd_policy.png)
+
+#### Group Policy Control Panel restriction verified
+![Control Panel access blocked on the domain-joined client, confirming the GPO applied correctly](./restriction.png)
+
+#### Group Policy drive mapping verified
+![IT-Drive (Z:) automatically mapped and connected on client login, per the GPO](./Drive_mapping.png)
+
+#### DHCP lease confirmed
+![ipconfig output showing a DHCP-leased address (10.0.2.100) within the configured scope](./DHCP_lease.png)
+
 ---
 
 ## Problems Encountered and Fixed
